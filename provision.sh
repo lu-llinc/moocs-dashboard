@@ -23,8 +23,12 @@ if [ ! -f $anaconda ]; then
     chmod +x $anaconda
 fi
 
-echo -e "\n\nInstalling Anaconda"
+echo "Installing Anaconda..."
 sudo ./$anaconda -b -p /opt/anaconda
+
+echo "Installing psycopg2..."
+sudo chmod ugo+wrx -R /opt/anaconda
+conda install -y psycopg2
 
 # Back to vagrant home
 cd /home/vagrant
@@ -34,6 +38,7 @@ echo "Installing base requirements..."
 sudo apt-get install zlib1g-dev
 sudo apt-get install -y git 
 sudo apt-get install -y g++ 
+sudo apt-get install -y postgresql-client
 
 sudo apt-get install zip
 sudo apt-get install unzip
