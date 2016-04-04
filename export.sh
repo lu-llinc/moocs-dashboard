@@ -1,0 +1,2 @@
+# Do not make changes in this file. This export command is called every time when the vagrant box starts. If you alter it, delete it or anything the whole service WILL NOT work any longer
+export PATH='${PATH}:/opt/anaconda/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'

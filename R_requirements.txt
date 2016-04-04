@@ -1,0 +1,15 @@
+devtools
+ggplot2
+scales
+countrycode
+RPostgreSQL
+data.table
+lubridate
+googleVis
+reshape2
+dplyr
+shiny
+shinydashboard
+knitr
+yaml
+rmarkdown
