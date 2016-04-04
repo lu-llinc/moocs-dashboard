@@ -27,7 +27,7 @@ sidebar <- dashboardSidebar(
     menuItem("Query", tabName = "query", icon = icon("database")),
     menuItem("Settings", tabName = "settings", icon = icon("exchange")),
     menuItem("Website", href = "http://campusdenhaag.leiden.edu/centre4innovation/", icon = icon("feed")),
-    menuItem("GitHub Repository", href = "https://github.com/LU-C4i", icon = icon("github")),
+    menuItem("Report Issue", href = "https://github.com/LU-C4i/moocs-dashboard/issues", icon = icon("github")),
     menuItem("Contact us!", href = "mailto:j.h.ginn@fgga.leidenuniv.nl", icon = icon("envelope"))
   )
 )
