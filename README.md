@@ -1,6 +1,8 @@
 ## README
 
-This vagrantbox sets up a virtual environment containing anaconda and Rstudio. Both python an Rstudio can be run from within a browser outside of the virtual environment.
+This repository contains a vagrant machine that sets up and configures a virtual environment containing the necessary software to run a dashboard displaying Coursera MOOC data from your local browser.
+
+Below, you will find instructions to boot the VM. For more detailed instructions, please visit [this document](https://jasperginn_leiden.gitbooks.io/a-shiny-dashboard-for-coursera-mooc-data/content/).
 
 ## Setting up the vagrantbox
 
