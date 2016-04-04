@@ -11,6 +11,7 @@ cd /vagrant
 
 # If not exists, create folder downloads
 if [ ! -d "downloads" ]; then
+	mkdir data
 	mkdir downloads
 fi
 
@@ -75,12 +76,12 @@ if [ ! -f $shiny ]; then
     chmod +x $shiny
 fi
 
-echo "Cloning script to dump Coursera data..."
-git clone https://github.com/JasperHG90/coursera-ondemand-exports
-
 echo "Installing shiny server..."
 sudo gdebi $shiny
 sudo dpkg -i $shiny
+
+echo "Cloning script to dump Coursera data..."
+git clone https://github.com/JasperHG90/coursera-ondemand-exports
 
 # Back to vagrant home
 cd /home/vagrant
