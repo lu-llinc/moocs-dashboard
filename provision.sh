@@ -26,10 +26,6 @@ fi
 echo "Installing Anaconda..."
 sudo ./$anaconda -b -p /opt/anaconda
 
-echo "Installing psycopg2..."
-sudo chmod ugo+wrx -R /opt/anaconda
-conda install -y psycopg2
-
 # Back to vagrant home
 cd /home/vagrant
 
@@ -84,9 +80,6 @@ fi
 echo "Installing shiny server..."
 sudo gdebi $shiny
 sudo dpkg -i $shiny
-
-echo "Cloning script to dump Coursera data..."
-git clone https://github.com/JasperHG90/coursera-ondemand-exports
 
 # Back to vagrant home
 cd /home/vagrant
