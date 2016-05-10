@@ -33,7 +33,6 @@ function(input, output) {
     postgres_defaults$database <- psql_db()
     # Save
     setts <- RJSONIO::toJSON(postgres_defaults, pretty = T)
-    print("HELLOLOLOLOLO")
     write(setts, paste0(getwd(), "/postgres_defaults.json"))
   })
   
