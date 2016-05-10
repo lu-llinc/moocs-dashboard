@@ -22,6 +22,20 @@ function(input, output) {
   psql_port <- reactive({
     input$psqlport
   }) 
+  # Listen for click to save settings as default
+  observeEvent(input$saveSettingsButton, {
+    postgres_defaults <- list()
+    # Set defaults
+    postgres_defaults$hostname <- psql_host()
+    postgres_defaults$port <- as.numeric(psql_port())
+    postgres_defaults$user <- psql_user()
+    postgres_defaults$password <- psql_pwd()
+    postgres_defaults$database <- psql_db()
+    # Save
+    setts <- RJSONIO::toJSON(postgres_defaults, pretty = T)
+    print("HELLOLOLOLOLO")
+    write(setts, paste0(getwd(), "/postgres_defaults.json"))
+  })
   
   # Dates on which users join ----
   

@@ -26,6 +26,8 @@ sidebar <- dashboardSidebar(
     menuItem("Quiz results", tabName = "quizres", icon = icon("calculator")),
     menuItem("Query", tabName = "query", icon = icon("database")),
     menuItem("Settings", tabName = "settings", icon = icon("exchange")),
+    menuItem("Documentation", href="https://www.gitbook.com/book/jasperginn_leiden/a-shiny-dashboard-for-coursera-mooc-data/details", 
+             icon = icon("file")),
     menuItem("Website", href = "http://campusdenhaag.leiden.edu/centre4innovation/", icon = icon("feed")),
     menuItem("Report Issue", href = "https://github.com/LU-C4i/moocs-dashboard/issues", icon = icon("github")),
     menuItem("Contact us!", href = "mailto:j.h.ginn@fgga.leidenuniv.nl", icon = icon("envelope"))
@@ -97,6 +99,18 @@ body <- dashboardBody(
                        htmlOutput("geoMap"), width = 8, background = "blue"))
     ),
     
+    # Forum
+    tabItem(tabName = "forum",
+            titlePanel("Forum Indicators")),
+    
+    # Video lectures
+    tabItem(tabName = "vidlecs",
+            titlePanel("Video Lectures")),
+    
+    # Quiz Results
+    tabItem(tabName = "quizres",
+            titlePanel("Quiz Results")),
+    
     # Query Editor
     tabItem(tabName = "query",
             titlePanel("Query editor"),
@@ -131,7 +145,9 @@ body <- dashboardBody(
             textInput(inputId="psqlport", label="Port", value = postgres_defaults$port),
             textInput(inputId="psqlusername", label="User", value = postgres_defaults$user),
             textInput(inputId="psqlpassword", label="Password", value = postgres_defaults$password),
-            textInput(inputId="psqldatabase", label="Database", value = postgres_defaults$database))
+            textInput(inputId="psqldatabase", label="Database", value = postgres_defaults$database),
+            p("Click below to save as default settings"),
+            actionButton("saveSettingsButton", "Save"))
     
   )
 )

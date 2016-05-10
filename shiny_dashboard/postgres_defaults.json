@@ -1,7 +1,7 @@
 {
 	"hostname" : "10.0.2.2",
 	"port" : 5432,
-	"user" : "Jasper",
-	"password" : "",
+	"user" : "jasper",
+	"password" : "root",
 	"database" : "terrorism_ondemand"
 }
