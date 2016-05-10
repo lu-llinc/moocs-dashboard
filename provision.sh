@@ -31,20 +31,20 @@ cd /home/vagrant
 
 # Install base packages
 echo "Installing base requirements..."
-sudo apt-get install zlib1g-dev
+sudo apt-get install -y zlib1g-dev
 sudo apt-get install -y git 
 sudo apt-get install -y g++ 
 sudo apt-get install -y postgresql-client
 
-sudo apt-get install zip
-sudo apt-get install unzip
+sudo apt-get install -y zip
+sudo apt-get install -y unzip
 sudo apt-get install -y libxml2-dev 
 sudo apt-get install -y libxslt1-dev
 
 sudo apt-get -y install libcurl4-openssl-dev  
 sudo apt-get -y install libssl0.9.8
 sudo apt-get -y install libcairo2-dev
-sudo apt-get install libpq-dev
+sudo apt-get install -y libpq-dev
 
 echo "Installing htop..."
 sudo apt-get install -y htop
